@@ -1,0 +1,13 @@
+.DS_Store
+.gradle/
+out/
+bin/
+dist/
+build/
+.idea
+*.iml
+*.ipr
+*.iws
+node_modules/
+bower_components/
+npm-debug.log
