@@ -1,5 +1,4 @@
 .DS_Store
-.gradle/
 out/
 bin/
 dist/
@@ -11,3 +10,4 @@ build/
 node_modules/
 bower_components/
 npm-debug.log
+.nodemonignore

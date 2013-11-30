@@ -45,3 +45,11 @@ From the `biodome` project directory , run the following from the command line:
 	npm install
 
 ### Available Grunt commands
+
+There are a number of [Grunt](http://www.gruntjs.com/) based targets that are used for running different build tasks:
+
+* `grunt`: To run tests locally and compile the CSS and JavaScript into `/dist`.
+* `grunt deploy`: To run tests locally ,compile and [UglifyJS](http://lisperator.net/uglifyjs/) the CSS and JavaScript into `/dist`.
+* `grunt dist`: Only compile CSS and JavaScript into `/dist`.
+* `grunt test`: Run all server js and all client JavaScript [Mocha](http://visionmedia.github.io/mocha/) unit tests headlessly in [PhantomJS](http://phantomjs.org/).
+* `grunt watch`: This is a developer convenience method for watching JavaScript and CSS file and automatically building them whenever you save.
