@@ -7,7 +7,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         clean: {
-            all: ['dist']
+            all: ['dist', 'build']
         },
         cssmin: {
             'dist/main/webapp/stylesheets/css/libs.css': concatenation.cssLibs.themes.standard.files
@@ -142,6 +142,18 @@ module.exports = function (grunt) {
             test: {
                 NODE_ENV: 'test'
             }
+        },
+        yuidoc: {
+            compile: {
+                name: '<%= pkg.name %>',
+                description: '<%= pkg.description %>',
+                version: '<%= pkg.version %>',
+                url: '<%= pkg.homepage %>',
+                options: {
+                    paths: ['src/main/javascript/', 'src/main/webapp/javascript'],
+                    outdir: 'build/docs/'
+                }
+            }
         }
     });
 
@@ -157,16 +169,17 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-yuidoc');
     grunt.loadNpmTasks('grunt-mocha');
-    grunt.loadNpmTasks('grunt-markdown');
     grunt.loadNpmTasks('grunt-mocha-test');
 
     // register NPM tasks.
     grunt.registerTask('check', 'Run csslint and jshint on all source files.', ['csslint', 'jshint']);
+    grunt.registerTask('docs', 'Generate all source code and project documentation.', ['yuidoc']);
     grunt.registerTask('dist', 'Build the css,js, images, and fonts distribution directory.', ['concat', 'copy']);
     grunt.registerTask('minify', 'Minimize all css and js source code in the distribution directory', ['cssmin', 'uglify']);
     grunt.registerTask('test', 'Run all server js and client js unit tests.', ['env:test', 'dist', 'check', 'mocha', 'mochaTest']);
-    grunt.registerTask('build', 'Build development distribution and run all unit tests.', ['test']);
+    grunt.registerTask('build', 'Build development distribution and run all unit tests.', ['test', 'docs']);
     grunt.registerTask('deploy', 'Build production distribution and run all unit tests.', ['build', 'minify']);
     grunt.registerTask('default', 'The default grunt target is "build".', ['build']);
 };
