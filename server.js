@@ -2,7 +2,7 @@
  * The main server side application entry file.
  *
  * NOTE: The order of module loading is important.
- * Randomly changing the order of the module loading could result catastrophic exceptions.
+ * Randomly changing the order of the module loading could result in catastrophic exceptions.
  */
 (function () {
     'use strict';

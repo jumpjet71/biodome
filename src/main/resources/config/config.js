@@ -1,3 +1,11 @@
+/**
+ * This configuration module is responsible for loading different
+ * environment configurations based on the current application
+ * running mode.
+ *
+ * @class config
+ * @module resources.config
+ */
 (function () {
     'use strict';
 
@@ -5,8 +13,7 @@
         mode = process.env.NODE_ENV || 'test';
 
     // load different configurations based on the running mode.
-
     module.exports = _.extend(
         require('../env/all'),
-        require('../config/config/' + mode) || {});
+        require('../env/' + mode + '.js') || {});
 })();

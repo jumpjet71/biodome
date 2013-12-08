@@ -1,4 +1,4 @@
-# Bio Dome
+# Biodome
 
  Bio informatics web site.
 
@@ -26,7 +26,7 @@ The "glue code" libraries being used:
 
 3) Clone the `biodome` repository:
 
-    git clone git@github.com:jumpjet71/bidome.git
+    git clone git@github.com:jumpjet71/biodome.git
 
 ### Project Setup
 
@@ -48,7 +48,7 @@ From the `biodome` project directory , run the following from the command line:
 
 There are a number of [Grunt](http://www.gruntjs.com/) based targets that are used for running different build tasks:
 
-* `grunt`: To run tests locally and compile the CSS and JavaScript into `/dist`.
+* `grunt`: To run tests locally and compile all of the CSS and JavaScript files into `/dist`.
 * `grunt deploy`: To run tests locally ,compile and [UglifyJS](http://lisperator.net/uglifyjs/) the CSS and JavaScript into `/dist`.
 * `grunt dist`: Only compile CSS and JavaScript into `/dist`.
 * `grunt test`: Run all server js and all client JavaScript [Mocha](http://visionmedia.github.io/mocha/) unit tests headlessly in [PhantomJS](http://phantomjs.org/).
