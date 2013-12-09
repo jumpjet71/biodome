@@ -150,7 +150,7 @@ module.exports = function (grunt) {
                 version: '<%= pkg.version %>',
                 url: '<%= pkg.homepage %>',
                 options: {
-                    paths: ['src/main/javascript/', 'src/main/webapp/javascript'],
+                    paths: ['src/main/resources/', 'src/main/javascript/'],
                     outdir: 'build/docs/'
                 }
             }

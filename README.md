@@ -18,7 +18,7 @@ The "glue code" libraries being used:
 * [Mocha](http://visionmedia.github.io/mocha/) for JS unit testing.
 * [Chai](http://chaijs.com/) for unit test asserting.
 
-### Requirements
+### Project Requirements
 
 1) Install [Node JS](http://nodejs.org/) and NPM (should come with Node).
 
@@ -27,6 +27,14 @@ The "glue code" libraries being used:
 3) Clone the `biodome` repository:
 
     git clone git@github.com:jumpjet71/biodome.git
+
+4) Download [MongoDB](http://www.mongodb.org/):
+
+    http://www.mongodb.org/downloads
+
+5) Install [MongoDB](http://www.mongodb.org/):
+
+    http://docs.mongodb.org/manual/installation/
 
 ### Project Setup
 
@@ -44,12 +52,12 @@ From the `biodome` project directory , run the following from the command line:
 
 	npm install
 
-### Available Grunt commands
+### Available Grunt Commands
 
 There are a number of [Grunt](http://www.gruntjs.com/) based targets that are used for running different build tasks:
 
 * `grunt`: To run tests locally and compile all of the CSS and JavaScript files into `/dist`.
 * `grunt deploy`: To run tests locally ,compile and [UglifyJS](http://lisperator.net/uglifyjs/) the CSS and JavaScript into `/dist`.
-* `grunt dist`: Only compile CSS and JavaScript into `/dist`.
+* `grunt dist`: Concatenate, and copy, CSS, JavaScript and image assets into `/dist`.
 * `grunt test`: Run all server js and all client JavaScript [Mocha](http://visionmedia.github.io/mocha/) unit tests headlessly in [PhantomJS](http://phantomjs.org/).
 * `grunt watch`: This is a developer convenience method for watching JavaScript and CSS file and automatically building them whenever you save.
