@@ -42,7 +42,10 @@
     // bootstrap express configuration.
     require('./src/main/resources/config/express')(app, mongoDb);
 
-    // create and run the web server instance
+    // bootstrap page routes.
+    require('./src/main/resources/config/page-routes')(app);
+
+    // create and run the node js web server instance
     http.createServer(app).listen(config.port,  function () {
 
         console.log("Express server listening on port " + config.port + ", running in " + config.mode + " mode.");

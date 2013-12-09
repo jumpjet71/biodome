@@ -1,5 +1,5 @@
 /**
- * Express JS configuration module
+ * Express configuration module
  *
  * @class express
  * @module resources.config

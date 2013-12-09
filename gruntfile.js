@@ -141,6 +141,12 @@ module.exports = function (grunt) {
         env: {
             test: {
                 NODE_ENV: 'test'
+            },
+            development : {
+                NODE_ENV: 'development'
+            },
+            production: {
+                NODE_ENV: 'production'
             }
         },
         yuidoc: {
