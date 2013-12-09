@@ -12,9 +12,7 @@
         mode: 'test',
         mongoDbUrl: "mongodb://localhost/biodome-test",
         port: 3000,
-        app: {
-            name: "Biodome - Test"
-        }
+        app: { name: "Biodome - Test" }
     };
 
 })();

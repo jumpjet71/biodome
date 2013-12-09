@@ -9,8 +9,10 @@
     'use strict';
 
     module.exports = {
-        port: process.env.PORT || 3000,
-        mongoDbUrl: process.env.MONGOHQ_URL
+        mode: 'default',
+        mongoDbUrl: process.env.MONGOHQ_URL || "mongodb://localhost/biodome-default",
+        port: process.env.PORT || 4000,
+        app: { name: "Biodome - Default" }
     };
 
 })();

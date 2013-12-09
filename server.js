@@ -35,6 +35,8 @@
             }
         });
     };
+
+    // execute domain model loading.
     walk(modelsPath);
 
     // bootstrap express configuration.
