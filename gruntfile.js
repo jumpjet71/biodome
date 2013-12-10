@@ -73,10 +73,14 @@ module.exports = function (grunt) {
                 'gruntfile.js',
                 'bower.json',
                 'concatenation.json',
-                'src/main/webapp/javascript/**/*.js',
+                'src/main/webapp/javascript/directives/**/*.js',
+                'src/main/webapp/javascript/rest-resources/**/*.js',
+                'src/main/webapp/javascript/utils/**/*.js',
                 'src/main/javascript/**/*.js',
                 'src/main/resources/**/*.js',
-                'src/test/webapp/javascript/**/*.js',
+                'src/test/webapp/javascript/directives/**/*.js',
+                'src/test/webapp/javascript/rest-resources/**/*.js',
+                'src/test/webapp/javascript/utils/**/*.js',
                 'src/test/javascript/**/*.js',
                 'src/test/resources/**/*.js'
             ],
@@ -156,7 +160,7 @@ module.exports = function (grunt) {
                 version: '<%= pkg.version %>',
                 url: '<%= pkg.homepage %>',
                 options: {
-                    paths: ['src/main/resources/', 'src/main/javascript/'],
+                    paths: ['src/main/resources/', 'src/main/javascript/', 'src/main/webapp/javascript'],
                     outdir: 'build/docs/'
                 }
             }
