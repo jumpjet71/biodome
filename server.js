@@ -40,7 +40,7 @@
     walk(modelsPath);
 
     // bootstrap express configuration.
-    require('./src/main/resources/config/express')(app, mongoDb);
+    require('./src/main/resources/config/express')(app, mongoDb, __dirname);
 
     // bootstrap page routes.
     require('./src/main/resources/config/page-routes')(app);

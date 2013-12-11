@@ -14,7 +14,7 @@
         path = require('path'),
         config = require('./config');
 
-    module.exports = function (app, mongoDb) {
+    module.exports = function (app, mongoDb, rootDirectoryName) {
 
         app.configure(function () {
 
@@ -25,7 +25,7 @@
                 buildClient = buildMain + '/webapp';
 
             app.set('port', port);
-            app.set('views', __dirname + srcClient + '/views');
+            app.set('views', rootDirectoryName + srcClient + '/views');
             app.set('view engine', 'jade');
 
             //Don't use logger for test env
@@ -49,8 +49,8 @@
 
             app.use(connect.compress());
 
-            app.use(express.static(path.join(__dirname, srcClient)));
-            app.use(express.static(path.join(__dirname, buildClient)));
+            app.use(express.static(path.join(rootDirectoryName, srcClient)));
+            app.use(express.static(path.join(rootDirectoryName, buildClient)));
             app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 
             app.use(flash());

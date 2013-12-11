@@ -1,0 +1,19 @@
+//- This is the base page for all pages in the application
+extends ../layouts/nav-bar-default
+
+block pageTitle
+    title #{title}
+block pageProductName
+    | Bidome
+block pageMainMenu
+    include ../partials/menus/page-main-menu
+block pageContent
+    .jumbotron
+        .container
+            h1 Home Page
+            p.lead
+                | A Bioinformatics Portal
+
+block pageFooter
+    p
+        | Copyright © 2013 Teloslogic Inc.
