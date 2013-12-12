@@ -11,6 +11,7 @@
         MongoStore = require('connect-mongo')(express),
         connect = require('connect'),
         flash = require('connect-flash'),
+        helpers = require('view-helpers'),
         path = require('path'),
         config = require('./config');
 
@@ -52,6 +53,9 @@
             app.use(express.static(path.join(rootDirectoryName, srcClient)));
             app.use(express.static(path.join(rootDirectoryName, buildClient)));
             app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+
+            //dynamic helpers
+            app.use(helpers(config.app.name));
 
             app.use(flash());
 

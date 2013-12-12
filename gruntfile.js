@@ -205,4 +205,5 @@ module.exports = function (grunt) {
     grunt.registerTask('build', 'Build with all css and js minified and run all unit tests.', ['build-debug', 'minify']);
     grunt.registerTask('default', 'The default grunt target is "build-debug".', ['build-debug']);
     grunt.registerTask('run-test-mode', 'Run application in test mode.', ['env:test', 'concurrent']);
+    grunt.registerTask('run-dev-mode', 'Run application in development mode.', ['env:development', 'concurrent']);
 };

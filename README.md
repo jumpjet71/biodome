@@ -61,3 +61,10 @@ There are a number of [Grunt](http://www.gruntjs.com/) based targets that are us
 * `grunt dist`: Concatenate, and copy, CSS, JavaScript and image assets into `/dist`.
 * `grunt test`: Run all server js and all client JavaScript [Mocha](http://visionmedia.github.io/mocha/) unit tests headless in [PhantomJS](http://phantomjs.org/).
 * `grunt watch`: This is a developer convenience method for watching JavaScript and CSS file and automatically building them whenever you save.
+
+### Running The Project
+
+The project is comprised of different running modes.
+
+* `grunt run-test-mode`: To run the application in test mode.
+* `grunt run-dev-mode`: To run the application in development mode.
