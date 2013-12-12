@@ -1,0 +1,13 @@
+.header-narrow {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 1px solid #446E9B;
+    margin: 20px 80px 0 80px;
+}
+
+.header-narrow h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+}

@@ -59,5 +59,5 @@ There are a number of [Grunt](http://www.gruntjs.com/) based targets that are us
 * `grunt`: To run tests locally and compile all of the CSS and JavaScript files into `/dist`.
 * `grunt deploy`: To run tests locally ,compile and [UglifyJS](http://lisperator.net/uglifyjs/) the CSS and JavaScript into `/dist`.
 * `grunt dist`: Concatenate, and copy, CSS, JavaScript and image assets into `/dist`.
-* `grunt test`: Run all server js and all client JavaScript [Mocha](http://visionmedia.github.io/mocha/) unit tests headlessly in [PhantomJS](http://phantomjs.org/).
+* `grunt test`: Run all server js and all client JavaScript [Mocha](http://visionmedia.github.io/mocha/) unit tests headless in [PhantomJS](http://phantomjs.org/).
 * `grunt watch`: This is a developer convenience method for watching JavaScript and CSS file and automatically building them whenever you save.

@@ -9,11 +9,10 @@
 (function () {
     'use strict';
 
-    var _ = require('underscore'),
-        mode = process.env.NODE_ENV || 'test';
+    var _ = require('underscore');
 
     // load different configurations based on the running mode.
     module.exports = _.extend(
         require('../env/all'),
-        require('../env/' + mode + '.js') || {});
+        require('../env/' + process.env.NODE_ENV + '.js') || {});
 })();

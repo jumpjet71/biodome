@@ -56,6 +56,18 @@ module.exports = function (grunt) {
                 dest: 'dist/main/webapp/templates.html'
             }
         },
+        uglify: {
+            options: {
+                mangle: false,
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+            },
+            dist: {
+                files: {
+                    'dist/main/webapp/javascript/libs.js': '<%= concat.jsLibs.dest %>',
+                    'dist/main/webapp/javascript/app.js': '<%= concat.jsApp.dest %>'
+                }
+            }
+        },
         watch: {
             main: {
                 files: [
@@ -189,7 +201,8 @@ module.exports = function (grunt) {
     grunt.registerTask('dist', 'Build the css, js, images, and fonts distribution directory.', ['concat', 'copy']);
     grunt.registerTask('minify', 'Minimize all css and js source code in the distribution directory', ['cssmin', 'uglify']);
     grunt.registerTask('test', 'Run all server js and client js unit tests.', ['env:test', 'dist', 'check', 'mocha', 'mochaTest']);
-    grunt.registerTask('build', 'Build development distribution and run all unit tests.', ['test', 'docs']);
-    grunt.registerTask('deploy', 'Build production distribution and run all unit tests.', ['build', 'minify']);
-    grunt.registerTask('default', 'The default grunt target is "build".', ['build']);
+    grunt.registerTask('build-debug', 'Build development distribution and run all unit tests.', ['test', 'docs']);
+    grunt.registerTask('build', 'Build with all css and js minified and run all unit tests.', ['build-debug', 'minify']);
+    grunt.registerTask('default', 'The default grunt target is "build-debug".', ['build-debug']);
+    grunt.registerTask('run-test-mode', 'Run application in test mode.', ['env:test', 'concurrent']);
 };
