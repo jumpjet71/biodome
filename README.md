@@ -1,6 +1,6 @@
 # Biodome
 
- Bio informatics web site.
+Bio informatics web site.
 
 ## The Tech
 
@@ -17,6 +17,8 @@ The "glue code" libraries being used:
 * [Bower](http://bower.io/) for web package managing.
 * [Mocha](http://visionmedia.github.io/mocha/) for JS unit testing.
 * [Chai](http://chaijs.com/) for unit test asserting.
+* [MongoDB](http://www.mongodb.org/) for data storing.
+* [Monggoose](http://mongoosejs.com/) for object modeling.
 
 ### Project Requirements
 
@@ -28,19 +30,16 @@ The "glue code" libraries being used:
 
     git clone git@github.com:jumpjet71/biodome.git
 
-4) Download [MongoDB](http://www.mongodb.org/):
+4) [Download MongoDB]( http://www.mongodb.org/downloads/).
 
-    http://www.mongodb.org/downloads
+5) [Install MongoDB](http://docs.mongodb.org/manual/installation/).
 
-5) Install [MongoDB](http://www.mongodb.org/):
-
-    http://docs.mongodb.org/manual/installation/
 
 ### Project Setup
 
 From the `biodome` project directory , run the following from the command line:
 
-1) Install [Grunt CLI](https://github.com/gruntjs/grunt-cli) and the [Bower CLI](http://sindresorhus.com/bower-components/) global dependencies:
+1) Install [Grunt CLI](https://github.com/gruntjs/grunt-cli/) and the [Bower CLI](http://sindresorhus.com/bower-components/) global dependencies:
 
 	npm install grunt-cli bower -g
 
@@ -62,9 +61,13 @@ There are a number of [Grunt](http://www.gruntjs.com/) based targets that are us
 * `grunt test`: Run all server js and all client JavaScript [Mocha](http://visionmedia.github.io/mocha/) unit tests headless in [PhantomJS](http://phantomjs.org/).
 * `grunt watch`: This is a developer convenience method for watching JavaScript and CSS file and automatically building them whenever you save.
 
-### Running The Project
+NOTE: [MongoDB](http://www.mongodb.org/) needs to be running in order to run build and test tasks.
 
-The project is comprised of different running modes.
+### Running The Application
+
+The project is comprised of different running modes:
 
 * `grunt run-test-mode`: To run the application in test mode.
 * `grunt run-dev-mode`: To run the application in development mode.
+
+NOTE: [MongoDB](http://www.mongodb.org/) needs to be running in order to run project.

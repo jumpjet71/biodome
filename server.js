@@ -36,7 +36,7 @@
         });
     };
 
-    // execute domain model loading.
+    // load all of the domain model schemas.
     walk(modelsPath);
 
     // bootstrap express configuration.
