@@ -22,6 +22,7 @@
 
     // bootstrap mongoose domain models.
     var modelsPath = './src/main/javascript/models';
+
     var walk = function (path) {
         fs.readdirSync(path).forEach(function (file) {
             var newPath = path + '/' + file;

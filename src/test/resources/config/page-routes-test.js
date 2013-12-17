@@ -33,6 +33,14 @@
             });
         });
 
+        describe('the admin page controller', function () {
+
+            it('should have the route "/pages/admin"', function () {
+
+                expect(app.routes.get[3].path).to.equal('/pages/admin');
+            });
+        });
+
     });
 
 })();

@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    require('../../../main/javascript/models/user');
+    require('./../../../../server');
 
     var expect = require('chai').expect,
         mongoose = require('mongoose'),
@@ -9,28 +9,45 @@
 
     describe('when using the User model:', function () {
 
-        var firstUser;
+        var firstUser, secondUser;
 
         beforeEach(function () {
 
             firstUser = new User({
-                name: 'Full name',
-                email: 'test@test.com',
-                username: 'user',
-                password: 'password'
+                firstName: 'Bruce',
+                lastName: 'Wayne',
+                email: 'bwayne@wayneinc.com',
+                username: 'batman',
+                password: 'justice'
             });
+
+            firstUser.save();
+
+            secondUser = new User({
+                firstName: 'Clark',
+                lastName: 'Kent',
+                email: 'ckent@dailyplanet.com',
+                username: 'superman',
+                password: 'hope'
+            });
+
+            secondUser.save();
         });
 
         describe('the save method', function () {
 
-            it('should begin with no users', function () {
+            it('should begin with two saved users', function() {
 
-                User.find({}, function (err, users) {
+                User.find({}, function(error, users) {
 
-                    expect(users.length).to.equal();
-
+                    expect(users.length).to.equal(2);
                 });
             });
+        });
+
+        afterEach(function () {
+
+            User.remove().exec();
         });
     });
 
