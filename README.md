@@ -18,7 +18,7 @@ The "glue code" libraries being used:
 * [Mocha](http://visionmedia.github.io/mocha/) for JS unit testing.
 * [Chai](http://chaijs.com/) for unit test asserting.
 * [MongoDB](http://www.mongodb.org/) for data storing.
-* [Monggoose](http://mongoosejs.com/) for object modeling.
+* [MongGoose](http://mongoosejs.com/) for object modeling.
 
 ### Project Requirements
 
@@ -33,7 +33,6 @@ The "glue code" libraries being used:
 4) [Download MongoDB]( http://www.mongodb.org/downloads/).
 
 5) [Install MongoDB](http://docs.mongodb.org/manual/installation/).
-
 
 ### Project Setup
 

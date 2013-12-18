@@ -36,11 +36,19 @@
 
         describe('the save method', function () {
 
-            it('should begin with two saved users', function() {
+            it('should begin with two saved users', function () {
 
-                User.find({}, function(error, users) {
+                User.find({}, function (error, users) {
 
                     expect(users.length).to.equal(2);
+                });
+            });
+
+            it('should fail to save an existing user again', function () {
+
+                firstUser.save(function (error) {
+
+                    expect(error);
                 });
             });
         });
