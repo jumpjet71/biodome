@@ -14,9 +14,9 @@
         return {
 
             /**
-             * Generate and return a RFC4122 v1 (timestamp-based) UUID.
+             * Generate and return a RFC4122 v1, timestamp-based, UUID.
              *
-             * @method uuid
+             * @method generate
              *
              * @param {Object} options [
              * node - (Array) Node id as Array of 6 bytes.
