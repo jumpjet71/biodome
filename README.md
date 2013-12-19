@@ -7,7 +7,7 @@ Bio informatics web site.
 The "glue code" libraries being used:
 
 * [Node JS](http://nodejs.org/) for HTTP serving and server JS moduling.
-* [Node Package Modules](https://npmjs.org/) for server JS package managing.
+* [Node Package Manager](https://npmjs.org/) for server JS package managing.
 * [Git](http://git-scm.com/) for source controlling.
 * [Express JS](http://www.expressjs.com/) for javascript web application structuring.
 * [Jade](http://www.jade-lang.com/) for server side templating.
@@ -22,7 +22,7 @@ The "glue code" libraries being used:
 
 ### Project Requirements
 
-1) Install [Node JS](http://nodejs.org/) and NPM (should come with Node).
+1) Install [Node JS](http://nodejs.org/) and [NPM](https://npmjs.org/) (NPM comes with node).
 
 2) Install [Git](http://git-scm.com/).
 
@@ -50,21 +50,20 @@ From the `biodome` project directory , run the following from the command line:
 
 	npm install
 
-### Available Grunt Commands
+### Available Build, Test and Deploy Grunt Commands
 
 There are a number of [Grunt](http://www.gruntjs.com/) based targets that are used for running different build tasks:
 
 * `grunt build-debug` or `grunt`: To run tests locally and compile all of the CSS and JavaScript files into `/dist`.
 * `grunt build`: To run tests locally ,compile and [UglifyJS](http://lisperator.net/uglifyjs/) the CSS and JavaScript into `/dist`.
-* `grunt dist`: Concatenate, and copy, CSS, JavaScript and image assets into `/dist`.
 * `grunt test`: Run all server js and all client JavaScript [Mocha](http://visionmedia.github.io/mocha/) unit tests headless in [PhantomJS](http://phantomjs.org/).
 * `grunt watch`: This is a developer convenience method for watching JavaScript and CSS file and automatically building them whenever you save.
 
-NOTE: [MongoDB](http://www.mongodb.org/) needs to be running in order to run build and test tasks.
+NOTE: [MongoDB](http://www.mongodb.org/) needs to be running in order to run test tasks.
 
-### Running The Application
+### Available Application Run Grunt Commands
 
-The project is comprised of different running modes:
+After successfully running `grunt`, `grunt build-debug`, or `grunt test` you are ready to run the application:
 
 * `grunt run-test-mode`: To run the application in test mode. (The running application URL will be: [http://localhost:3000](http://localhost:3000))
 * `grunt run-dev-mode`: To run the application in development mode. (The running application URL will be: [http://localhost:3000](http://localhost:3000))
