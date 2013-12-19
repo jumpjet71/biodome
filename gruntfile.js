@@ -56,6 +56,17 @@ module.exports = function (grunt) {
                 dest: 'dist/main/webapp/templates.html'
             }
         },
+        htmlmin: {
+            dist: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: {
+                    'dist/main/webapp/templates.html': 'dist/main/webapp/templates.html'
+                }
+            }
+        },
         uglify: {
             options: {
                 mangle: false,
@@ -192,6 +203,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-yuidoc');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-mocha');
     grunt.loadNpmTasks('grunt-mocha-test');
 
@@ -199,7 +211,7 @@ module.exports = function (grunt) {
     grunt.registerTask('check', 'Run csslint and jshint on all source files.', ['csslint', 'jshint']);
     grunt.registerTask('docs', 'Generate all project documentation.', ['yuidoc']);
     grunt.registerTask('dist', 'Build the css, js, images, and fonts distribution directory.', ['concat', 'copy']);
-    grunt.registerTask('minify', 'Minimize all css and js source code in the distribution directory', ['cssmin', 'uglify']);
+    grunt.registerTask('minify', 'Minimize all css and js source code in the distribution directory', ['cssmin', 'uglify', 'htmlmin']);
     grunt.registerTask('test', 'Run all server js and client js unit tests.', ['env:test', 'dist', 'check', 'mocha', 'mochaTest']);
     grunt.registerTask('build-debug', 'Build development distribution and run all unit tests.', ['test', 'docs']);
     grunt.registerTask('build', 'Build with all css and js minified and run all unit tests.', ['build-debug', 'minify']);
