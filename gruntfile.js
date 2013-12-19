@@ -49,7 +49,7 @@ module.exports = function (grunt) {
             },
             cssApp: {
                 src: concatenation.cssApp.themes.standard.files,
-                dest: 'dist/main/webapp/stylesheets/standard/app.css'
+                dest: 'dist/main/webapp/stylesheets/app.css'
             },
             htmlTemplates: {
                 src: concatenation.htmlTemplates.files,

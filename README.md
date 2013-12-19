@@ -54,8 +54,8 @@ From the `biodome` project directory , run the following from the command line:
 
 There are a number of [Grunt](http://www.gruntjs.com/) based targets that are used for running different build tasks:
 
-* `grunt`: To run tests locally and compile all of the CSS and JavaScript files into `/dist`.
-* `grunt deploy`: To run tests locally ,compile and [UglifyJS](http://lisperator.net/uglifyjs/) the CSS and JavaScript into `/dist`.
+* `grunt build-debug` or `grunt`: To run tests locally and compile all of the CSS and JavaScript files into `/dist`.
+* `grunt build`: To run tests locally ,compile and [UglifyJS](http://lisperator.net/uglifyjs/) the CSS and JavaScript into `/dist`.
 * `grunt dist`: Concatenate, and copy, CSS, JavaScript and image assets into `/dist`.
 * `grunt test`: Run all server js and all client JavaScript [Mocha](http://visionmedia.github.io/mocha/) unit tests headless in [PhantomJS](http://phantomjs.org/).
 * `grunt watch`: This is a developer convenience method for watching JavaScript and CSS file and automatically building them whenever you save.
@@ -66,7 +66,7 @@ NOTE: [MongoDB](http://www.mongodb.org/) needs to be running in order to run bui
 
 The project is comprised of different running modes:
 
-* `grunt run-test-mode`: To run the application in test mode.
-* `grunt run-dev-mode`: To run the application in development mode.
+* `grunt run-test-mode`: To run the application in test mode. (The running application URL will be: [http://localhost:3000](http://localhost:3000))
+* `grunt run-dev-mode`: To run the application in development mode. (The running application URL will be: [http://localhost:3000](http://localhost:3000))
 
 NOTE: [MongoDB](http://www.mongodb.org/) needs to be running in order to run project.
