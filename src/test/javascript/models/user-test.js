@@ -9,9 +9,9 @@
 
     describe('when using the User model:', function () {
 
-        var firstUser, secondUser;
+        var firstUser;
 
-        beforeEach(function () {
+        before(function (done) {
 
             firstUser = new User({
                 firstName: 'Bruce',
@@ -21,27 +21,23 @@
                 password: 'justice'
             });
 
-            firstUser.save();
-
-            secondUser = new User({
-                firstName: 'Clark',
-                lastName: 'Kent',
-                email: 'ckent@dailyplanet.com',
-                username: 'superman',
-                password: 'hope'
-            });
-
-            secondUser.save();
+            done();
         });
 
         describe('the save method', function () {
 
-            it('should begin with two saved users', function () {
+            it('should begin with no saved users', function (done) {
 
                 User.find({}, function (error, users) {
 
-                    expect(users.length).to.equal(2);
+                    expect(users.length).to.equal(0);
+                    done();
                 });
+            });
+
+            it('should be able to save a user without problems', function(done) {
+
+                firstUser.save(done);
             });
 
             it('should fail to save an existing user again', function () {
@@ -53,9 +49,10 @@
             });
         });
 
-        afterEach(function () {
+        after(function (done) {
 
             User.remove().exec();
+            done();
         });
     });
 

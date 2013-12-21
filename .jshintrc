@@ -27,8 +27,11 @@
         "describe",
         "it",
         "afterEach",
+        "after",
         "beforeEach",
+        "before",
         "expect",
+        "done",
         "uuid"
     ]
 }
