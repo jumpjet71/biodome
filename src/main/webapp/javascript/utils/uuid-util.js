@@ -2,14 +2,14 @@
  *
  * A wrapper for a fast, simple, RFC 4122 compliant UUID generator.
  *
- * @class uuidUtils
+ * @class uuidUtil
  * @module webapp.javascript.utils
  *
  */
 (function (utils) {
     'use strict';
 
-    utils.factory('uuidUtils', function () {
+    utils.factory('uuidUtil', function () {
 
         return {
 

@@ -1,6 +1,6 @@
 # Biodome
 
-Bio informatics web site.
+Informatics reporting and analysis web site.
 
 ## The Tech
 

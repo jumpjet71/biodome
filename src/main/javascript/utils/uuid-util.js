@@ -2,11 +2,11 @@
  *
  * A wrapper for a fast, simple, RFC 4122 compliant UUID generator.
  *
- * @class uuidUtils
+ * @class uuidUtil
  * @module javascript.utils
  *
  */
-exports.uuidUtils = (function () {
+exports.uuidUtil = (function () {
     'use strict';
 
     var uuid = require('node-uuid');
