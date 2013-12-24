@@ -12,7 +12,8 @@
         mode: 'development',
         mongoDbUrl: "mongodb://localhost/biodome-development",
         port: 3000,
-        app: { name: "Biodome - Development" }
+        app: { name: "Biodome - Development" },
+        apiVersion: "/v1/api"
     };
 
 })();

@@ -4,6 +4,8 @@
 }
 .logo span {
 
-    font-family: Arial,Helvetica,sans-serif;
-    color: #00b3ee;
+    background: url('../../../images/biodome.png') no-repeat 0 -12px;
+    padding-top: 1px;
+    padding-left: 125px;
+    padding-bottom: 4px;
 }

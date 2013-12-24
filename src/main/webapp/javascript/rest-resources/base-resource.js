@@ -18,7 +18,7 @@
             /**
              * The REST api endpoint api version number.
              */
-            apiVersion: "/api/v1",
+            apiVersion: "/v1/api",
             /**
              * Underlying resource object.
              */

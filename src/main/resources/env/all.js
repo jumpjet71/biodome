@@ -12,7 +12,8 @@
         mode: 'default',
         mongoDbUrl: process.env.MONGOHQ_URL || "mongodb://localhost/biodome-default",
         port: process.env.PORT || 4000,
-        app: { name: "Biodome - Default" }
+        app: { name: "Biodome - Default" },
+        apiVersion: ""
     };
 
 })();
