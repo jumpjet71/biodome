@@ -11,33 +11,33 @@
 (function (restResources) {
     'use strict';
 
-    restResources.factory('baseResource', function ($http) {
+    restResources.factory('baseResource', function ($http, urlConfigUtil) {
 
         return {
 
             /**
-             * The REST api endpoint api version number.
-             */
-            apiVersion: "/v1/api",
-            /**
-             * Underlying resource object.
+             * The model resource object.
              */
             model: {},
             /**
-             * The collection resource object.
+             * The collection resource object; made up of
+             * a list of model objects.
              */
             collection: {},
             /**
              * The collection pagination criteria object. This object has
              * a default implementation that is client bound. Can be overridden
              * by resource object API call.
-             *
              */
             paginationCriteria: {},
             /**
              * The HTTP response status.
              */
             httpStatus: null,
+            /**
+             * REST resource URL settings and configuration.
+             */
+            url: urlConfigUtil,
             /**
              * Used to retrieve (or read) a representation of a resource. In the “happy” (or non-error) path, returns
              * a representation in JSON and a response code of 200(OK). In an error case, it returns 4xx and 5xx http request error codes.
@@ -51,7 +51,7 @@
 
                 var that = this;
 
-                return $http.get(this.apiVersion + "/" + this.model.id).success(function (response) {
+                return $http.get(this.url.getUrl() + "/" + this.model.id).success(function (response) {
 
                     that.httpStatus = response.httpStatus;
                     that.model = response.data;
@@ -71,7 +71,7 @@
 
                 var that = this;
 
-                return $http.post(this.apiVersion, this.model).success(function (response) {
+                return $http.post(this.url.getUrl(), this.model).success(function (response) {
 
                     that.httpStatus = response.httpStatus;
                     that.model = response.data;
@@ -91,7 +91,7 @@
 
                 var that = this;
 
-                return $http.put(this.apiVersion + "/" + this.model.id, this.model).success(function (response) {
+                return $http.put(this.url.getUrl() + "/" + this.model.id, this.model).success(function (response) {
 
                     that.httpStatus = response.httpStatus;
                     that.model = response.data;
@@ -110,7 +110,7 @@
 
                 var that = this;
 
-                return $http.delete(this.apiVersion + "/" + this.model.id).success(function (response) {
+                return $http.delete(this.url.getUrl() + "/" + this.model.id).success(function (response) {
 
                     that.httpStatus = response.httpStatus;
                     that.model = response.data;
@@ -129,7 +129,7 @@
 
                 var that = this;
 
-                return $http.get(this.apiVersion, this.paginationCriteria).success(function (response) {
+                return $http.get(this.url.getUrl(), this.paginationCriteria).success(function (response) {
 
                     that.httpStatus = response.httpStatus;
                     that.collection = response.data;
