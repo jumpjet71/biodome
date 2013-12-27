@@ -24,6 +24,7 @@
 
                 expect(user.model.id).to.equal(response.data.id);
                 expect(user.httpStatus).to.equal(response.httpStatus);
+                expect(user.model.firstName).to.equal(response.data.firstName);
             });
         });
 
