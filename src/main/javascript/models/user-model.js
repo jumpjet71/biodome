@@ -1,7 +1,7 @@
 /**
  * Application user domain object definition.
  *
- * @class user
+ * @class userModel
  * @module javascript.models
  */
 (function () {
@@ -80,5 +80,5 @@
         }
     };
 
-    mongoose.model('User', UserSchema);
+    mongoose.model('UserModel', UserSchema);
 })();

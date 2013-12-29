@@ -25,6 +25,8 @@
             /**
              * Get a REST endpoint URL.
              * @method getUrl
+             *
+             * @return {String} the REST api url.
              */
             getUrl: function () {
 

@@ -23,6 +23,8 @@ exports.uuidUtil = (function () {
          * clockseq - (Number between 0 - 0x3fff) RFC clock sequence.
          * nsecs - (Number between 0-9999) additional time, in 100-nanosecond units
          * ].
+         *
+         * @return {String} the UUID.
          */
         generate: function (options) {
 

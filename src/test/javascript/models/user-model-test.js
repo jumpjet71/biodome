@@ -5,7 +5,7 @@
 
     var expect = require('chai').expect,
         mongoose = require('mongoose'),
-        User = mongoose.model('User');
+        User = mongoose.model('UserModel');
 
     describe('when using the User model:', function () {
 
