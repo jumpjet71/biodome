@@ -18,7 +18,7 @@ The "glue code" libraries being used:
 * [Mocha](http://visionmedia.github.io/mocha/) for JS unit testing.
 * [Chai](http://chaijs.com/) for unit test asserting.
 * [MongoDB](http://www.mongodb.org/) for data storing.
-* [MongGoose](http://mongoosejs.com/) for object modeling.
+* [MongGoose](http://mongoosejs.com/) for validation, casting and business logic boilerplating.
 
 ### Project Requirements
 
