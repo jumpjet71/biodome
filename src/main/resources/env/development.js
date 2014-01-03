@@ -10,10 +10,10 @@
 
     module.exports = {
         mode: 'development',
-        mongoDbUrl: "mongodb://localhost/biodome-development",
+        mongoDbUrl: "mongodb://localhost/biodome-dev",
         port: 3000,
         app: { name: "Biodome - Development" },
-        apiVersion: "/v1/api"
+        rootUrl: "/v1/api"
     };
 
 })();

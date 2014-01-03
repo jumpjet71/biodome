@@ -61,11 +61,27 @@ There are a number of [Grunt](http://www.gruntjs.com/) based targets that are us
 
 NOTE: [MongoDB](http://www.mongodb.org/) needs to be running in order to run test tasks.
 
-### Available Application Run Grunt Commands
+### Environmental Settings
 
-After successfully running `grunt`, `grunt build-debug`, or `grunt test` you are ready to run the application:
+There are three environments provided by default, `development`, `test`, and `production`.
+Each of these environments has the following configuration options:
 
-* `grunt run-test-mode`: To run the application in test mode. (The running application URL will be: [http://localhost:3000](http://localhost:3000))
-* `grunt run-dev-mode`: To run the application in development mode. (The running application URL will be: [http://localhost:3000](http://localhost:3000))
+* `mongoDbUrl`: This is the url of the MongoDB database to use, and is set by default set to `mongodb://localhost/biodome-test` for the test environment.
+
+To run with a different environment, just specify `NODE_ENV` as you call grunt:
+
+    $ NODE_ENV=test grunt
+
+If you are using node directly instead of grunt, it is very similar:
+
+    $ NODE_ENV=test node server
+
+### Application Run Grunt Commands
+
+After successfully running `grunt`, `grunt build-debug`, or `grunt test` you are ready to run the application.
+The following commands set `NODE_ENV` with the appropriate environment, and [Nodemon](http://nodemon.io/) settings.
+
+* `grunt run-test-mode`: To run the application with test environment. (The running application URL will be: [http://localhost:3000](http://localhost:3000))
+* `grunt run-dev-mode`: To run the application with development environment. (The running application URL will be: [http://localhost:3000](http://localhost:3000))
 
 NOTE: [MongoDB](http://www.mongodb.org/) needs to be running in order to run project.

@@ -13,7 +13,7 @@
         mongoDbUrl: "mongodb://localhost/biodome-test",
         port: 3000,
         app: { name: "Biodome - Test" },
-        apiVersion: "/v1/api"
+        rootUrl: "/v1/api"
     };
 
 })();

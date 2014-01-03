@@ -10,7 +10,7 @@
 
     module.exports = {
         mode: 'default',
-        mongoDbUrl: process.env.MONGOHQ_URL || "mongodb://localhost/biodome-default",
+        mongoDbUrl: process.env.MONGOHQ_URL || "mongodb://localhost/biodome-test",
         port: process.env.PORT || 4000,
         app: { name: "Biodome - Default" },
         apiVersion: ""

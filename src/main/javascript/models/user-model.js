@@ -9,6 +9,7 @@
 
     var mongoose = require('mongoose'),
         crypto = require('crypto'),
+        uuidUtil = require('../utils/uuid-util').uuidUtil,
         Schema = mongoose.Schema;
 
     /**
@@ -61,7 +62,7 @@
          * @api public
          */
         makeSalt: function () {
-            return Math.round((new Date().valueOf() * Math.random())) + '';
+            return Math.round((new Date().valueOf() * Math.random() * uuidUtil.generate())) + '';
         },
 
         /**
