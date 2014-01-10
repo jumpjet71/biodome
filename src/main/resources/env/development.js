@@ -2,7 +2,7 @@
  * The development configuration contains all of the test application
  * environment variable settings.
  *
- * @class test
+ * @class development
  * @module resources.env
  */
 (function () {

@@ -22,7 +22,8 @@
         email: String,
         username: {
             type: String,
-            unique: true
+            unique: true,
+            index: true
         },
         provider: String,
         hashedPassword: String,

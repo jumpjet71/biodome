@@ -1,7 +1,7 @@
 /**
  * This configuration module is responsible for loading different
  * environment configurations based on the current application
- * running mode('test', 'dev', or 'prod').
+ * running mode('test', 'development', or 'production').
  *
  * @class config
  * @module resources.config

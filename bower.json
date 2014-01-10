@@ -2,7 +2,6 @@
     "name":  "biodome",
     "version": "0.0.1",
     "dependencies": {
-        "async": "0.1.23",
         "underscore": "1.5.1",
         "angular": "1.2.0",
         "angular-resource": "1.2.0",

@@ -59,7 +59,7 @@ There are a number of [Grunt](http://www.gruntjs.com/) based targets that are us
 * `grunt test`: Run all server js and all client JavaScript [Mocha](http://visionmedia.github.io/mocha/) unit tests headless in [PhantomJS](http://phantomjs.org/).
 * `grunt watch`: This is a developer convenience method for watching JavaScript and CSS file and automatically building them whenever you save.
 
-NOTE: [MongoDB](http://www.mongodb.org/) needs to be running in order to run test tasks.
+NOTE: [MongoDB](http://www.mongodb.org/) needs to be installed and running in order to run test tasks.
 
 ### Environmental Settings
 
@@ -67,6 +67,7 @@ There are three environments provided by default, `development`, `test`, and `pr
 Each of these environments has the following configuration options:
 
 * `mongoDbUrl`: This is the url of the MongoDB database to use, and is set by default set to `mongodb://localhost/biodome-test` for the test environment.
+* `app.name`: This is the name of your app or website, and can be different for each environment. You can tell which environment you are running by looking at the TITLE attribute that your app generates.
 
 To run with a different environment, just specify `NODE_ENV` as you call grunt:
 
@@ -79,9 +80,9 @@ If you are using node directly instead of grunt, it is very similar:
 ### Application Run Grunt Commands
 
 After successfully running `grunt`, `grunt build-debug`, or `grunt test` you are ready to run the application.
-The following commands set `NODE_ENV` with the appropriate environment, and [Nodemon](http://nodemon.io/) settings.
+The following commands set `NODE_ENV` with the appropriate environment, [Nodemon](http://nodemon.io/) for server side code monitoring.
 
 * `grunt run-test-mode`: To run the application with test environment. (The running application URL will be: [http://localhost:3000](http://localhost:3000))
 * `grunt run-dev-mode`: To run the application with development environment. (The running application URL will be: [http://localhost:3000](http://localhost:3000))
 
-NOTE: [MongoDB](http://www.mongodb.org/) needs to be running in order to run project.
+NOTE: [MongoDB](http://www.mongodb.org/) needs to be installed and running in order to run project.

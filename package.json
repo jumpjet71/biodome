@@ -41,7 +41,7 @@
         "mocha": "1.14.0"
     },
     "dependencies": {
-        "async": "0.2.9",
+        "when": "2.7.1",
         "express": "3.4.4",
         "jade": "0.35.0",
         "view-helpers": "0.1.3",
