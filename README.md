@@ -1,3 +1,4 @@
+[![build status](https://travis-ci.org/jumpjet71/biodome.png)](https://travis-ci.org/jumpjet71/biodome)
 # Biodome
 
 Informatics reporting and analysis web site.
